@@ -8,7 +8,7 @@ using Xamarin.Forms;
 
 namespace KamishibaiSample.NavigationPage.ViewModels
 {
-    public class ContentPage1ViewModel : ViewModelBase, IPageLifecycleAware<string>
+    public class ContentPage1ViewModel : ViewModelBase, IPageLifecycleAware<string>, IApplicationLifecycleAware
     {
         private string _message;
 
@@ -41,6 +41,16 @@ namespace KamishibaiSample.NavigationPage.ViewModels
         }
 
         public void OnClosed()
+        {
+            WriteLog();
+        }
+
+        public void OnResume()
+        {
+            WriteLog();
+        }
+
+        public void OnSleep()
         {
             WriteLog();
         }

@@ -6,7 +6,7 @@ using Nuits.Xamarin.Forms.Kamishibai.Mvvm;
 
 namespace KamishibaiSample.NavigationPage.ViewModels
 {
-    public class ContentPage2ViewModel : ViewModelBase, IPageLifecycleAware<DateTime>
+    public class ContentPage2ViewModel : ViewModelBase, IPageLifecycleAware<DateTime>, IApplicationLifecycleAware
     {
         private DateTime _dateTime;
 
@@ -36,6 +36,16 @@ namespace KamishibaiSample.NavigationPage.ViewModels
         }
 
         public void OnClosed()
+        {
+            WriteLog();
+        }
+
+        public void OnResume()
+        {
+            WriteLog();
+        }
+
+        public void OnSleep()
         {
             WriteLog();
         }

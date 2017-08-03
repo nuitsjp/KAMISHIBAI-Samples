@@ -9,7 +9,7 @@ namespace KamishibaiSample.MasterDetailPage.Views
     public class PushToDetailAsync<T> : MasterDetailAction<T> where T : Page, new()
     {
         public static readonly BindableProperty AnimatedProperty =
-            BindableProperty.Create(nameof(Animated), typeof(bool), typeof(AnimatableNavigationAction<T>), true);
+            BindableProperty.Create(nameof(Animated), typeof(bool), typeof(AnimatableNavigation<T>), true);
 
         public bool Animated
         {

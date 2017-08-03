@@ -145,6 +145,9 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="Nuits.Xamarin.Forms.Kamishibai, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Nuits.Xamarin.Forms.Kamishibai.1.0.0-CI00002\lib\netstandard1.0\Nuits.Xamarin.Forms.Kamishibai.dll</HintPath>
+    </Reference>
     <Reference Include="Xamarin.Forms.BehaviorsPack, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Xamarin.Forms.BehaviorsPack.1.2.0\lib\netstandard1.0\Xamarin.Forms.BehaviorsPack.dll</HintPath>
     </Reference>
@@ -280,12 +283,6 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\..\..\Source\Nuits.Xamarin.Forms.Kamishibai\Nuits.Xamarin.Forms.Kamishibai.csproj">
-      <Project>{b2cf1bb2-8780-42a3-97fb-61fa24120322}</Project>
-      <Name>Nuits.Xamarin.Forms.Kamishibai</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\..\packages\Xamarin.Forms.2.3.4.247\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets" Condition="Exists('..\..\packages\Xamarin.Forms.2.3.4.247\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.targets')" />
