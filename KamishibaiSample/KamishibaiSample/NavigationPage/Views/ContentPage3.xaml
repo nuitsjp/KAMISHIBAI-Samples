@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:KamishibaiSample.NavigationPage.ViewModels;assembly=KamishibaiSample"
+             xmlns:mvvm="clr-namespace:Nuits.Xamarin.Forms.Kamishibai.Mvvm;assembly=Nuits.Xamarin.Forms.Kamishibai"
+             xmlns:views="clr-namespace:KamishibaiSample.NavigationPage.Views;assembly=KamishibaiSample"
+             x:Class="KamishibaiSample.NavigationPage.Views.ContentPage3"
+             Title="ContentPage3">
+    <ContentPage.BindingContext>
+        <viewModels:ContentPage3ViewModel/>
+    </ContentPage.BindingContext>
+    <ContentPage.Behaviors>
+        <mvvm:PopToRootAsync Request="{Binding RequestPopToRoot}"/>
+        <mvvm:RemovePage x:TypeArguments="views:ContentPage1" Request="{Binding RequestRemoveContentPage1}"/>
+        <mvvm:RemovePage x:TypeArguments="views:ContentPage3" Request="{Binding RequestRemoveThis}"/>
+    </ContentPage.Behaviors>
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+            <Label Text="Welcome to Xamarin Forms!" />
+            <Button Text="PopToRootAsync" Command="{Binding RequestPopToRoot}"/>
+            <Button Text="Remove ContentPage1" Command="{Binding RequestRemoveContentPage1}"/>
+            <Button Text="Remove This Page" Command="{Binding RequestRemoveThis}"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

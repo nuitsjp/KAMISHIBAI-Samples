@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:KamishibaiSample.CarouselPage.ViewModels;assembly=KamishibaiSample"
+             xmlns:mvvm="clr-namespace:Nuits.Xamarin.Forms.Kamishibai.Mvvm;assembly=Nuits.Xamarin.Forms.Kamishibai"
+             xmlns:views="clr-namespace:KamishibaiSample.CarouselPage.Views;assembly=KamishibaiSample"
+             x:Class="KamishibaiSample.CarouselPage.Views.ChildPage3"
+             Title="ChildPage3">
+    <ContentPage.BindingContext>
+        <viewModels:ChildPage3ViewModel/>
+    </ContentPage.BindingContext>
+    <ContentPage.Behaviors>
+        <views:AddCarouselChildPage x:TypeArguments="views:ChildPageN" Request="{Binding RequestAddChildCommand}"/>
+    </ContentPage.Behaviors>
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+            <Label Text="ChildPage3" />
+            <Button Text="Add ChildPage" Command="{Binding RequestAddChildCommand}"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

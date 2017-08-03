@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:KamishibaiSample.NavigationPage.ViewModels;assembly=KamishibaiSample"
+             xmlns:mvvm="clr-namespace:Nuits.Xamarin.Forms.Kamishibai.Mvvm;assembly=Nuits.Xamarin.Forms.Kamishibai"
+             xmlns:views="clr-namespace:KamishibaiSample.NavigationPage.Views;assembly=KamishibaiSample"
+             x:Class="KamishibaiSample.NavigationPage.Views.ContentPage1"
+             Title="ContentPage1">
+    <ContentPage.BindingContext>
+        <viewModels:ContentPage1ViewModel/>
+    </ContentPage.BindingContext>
+    <ContentPage.Behaviors>
+        <mvvm:PushAsync x:TypeArguments="views:ContentPage2" Request="{Binding RequestPage2}"/>
+        <mvvm:PopModalAsync Request="{Binding RequestPopModalCommand}"/>
+    </ContentPage.Behaviors>
+    <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+        <Label Text="{Binding Message}" />
+        <Button Text="Navigate ContentPage2" Command="{Binding NavigatePage2Command}"/>
+        <Button Text="PopModalAsync" Command="{Binding RequestPopModalCommand}"/>
+    </StackLayout>
+</ContentPage>

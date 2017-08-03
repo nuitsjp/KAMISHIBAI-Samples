@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:SimplestSample.ViewModels;assembly=SimplestSample"
+             xmlns:mvvm="clr-namespace:Nuits.Xamarin.Forms.Kamishibai.Mvvm;assembly=Nuits.Xamarin.Forms.Kamishibai"
+             xmlns:views="clr-namespace:SimplestSample.Views;assembly=SimplestSample"
+             x:Class="SimplestSample.Views.FirstPage"
+             Title="First Page">
+    <ContentPage.BindingContext>
+        <viewModels:FirstPageViewModel/>
+    </ContentPage.BindingContext>
+    <ContentPage.Behaviors>
+        <mvvm:PushAsync x:TypeArguments="views:SecondPage" Request="{Binding RequestSecondPage}"/>
+    </ContentPage.Behaviors>
+    <StackLayout HorizontalOptions="Fill" VerticalOptions="Center" Margin="10">
+        <Label Text="{Binding Message}" HorizontalOptions="Center"/>
+        <Button Text="Navigate to Second" Command="{Binding NavigateCommand}"/>
+    </StackLayout>
+</ContentPage>

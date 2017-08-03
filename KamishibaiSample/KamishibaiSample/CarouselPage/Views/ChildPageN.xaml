@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:KamishibaiSample.CarouselPage.ViewModels;assembly=KamishibaiSample"
+             xmlns:mvvm="clr-namespace:Nuits.Xamarin.Forms.Kamishibai.Mvvm;assembly=Nuits.Xamarin.Forms.Kamishibai"
+             xmlns:views="clr-namespace:KamishibaiSample.CarouselPage.Views;assembly=KamishibaiSample"
+             x:Class="KamishibaiSample.CarouselPage.Views.ChildPageN"
+             Title="{Binding PageName}">
+    <ContentPage.BindingContext>
+        <viewModels:ChildPageNViewModel/>
+    </ContentPage.BindingContext>
+    <ContentPage.Behaviors>
+        <views:RemoveCarouselChildPage Request="{Binding RequestRemoveThisCommand}"/>
+    </ContentPage.Behaviors>
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+            <Label Text="{Binding PageName}" />
+            <Button Text="Remove This Page" Command="{Binding RequestRemoveThisCommand}"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                  xmlns:views="clr-namespace:KamishibaiSample.MasterDetailPage.Views;assembly=KamishibaiSample"
+                  xmlns:viewModels="clr-namespace:KamishibaiSample.MasterDetailPage.ViewModels;assembly=KamishibaiSample"
+                  x:Class="KamishibaiSample.MasterDetailPage.Views.MyMasterDetailPage">
+    <MasterDetailPage.BindingContext>
+        <viewModels:MyMasterDetailPageViewModel/>
+    </MasterDetailPage.BindingContext>
+    <MasterDetailPage.Behaviors>
+        <views:SetToDetail x:TypeArguments="views:DetailPage2" Request="{Binding SetDetailRequestCommand}"/>
+        <views:PushToDetailAsync x:TypeArguments="views:DetailPage1" Request="{Binding PushToDetailRequestCommand}"/>
+    </MasterDetailPage.Behaviors>
+    <MasterDetailPage.Master>
+        <views:MasterPage1/>
+    </MasterDetailPage.Master>
+    <MasterDetailPage.Detail>
+        <NavigationPage>
+            <x:Arguments>
+                <views:DetailPage1/>
+            </x:Arguments>
+        </NavigationPage>
+    </MasterDetailPage.Detail>
+</MasterDetailPage>

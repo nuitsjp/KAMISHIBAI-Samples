@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:KamishibaiSample.ListViewPage.ViewModels;assembly=KamishibaiSample"
+             xmlns:mvvm="clr-namespace:Nuits.Xamarin.Forms.Kamishibai.Mvvm;assembly=Nuits.Xamarin.Forms.Kamishibai"
+             xmlns:views="clr-namespace:KamishibaiSample.ListViewPage.Views;assembly=KamishibaiSample"
+             xmlns:behaviorsPack="clr-namespace:Xamarin.Forms.BehaviorsPack;assembly=Xamarin.Forms.BehaviorsPack"
+             x:Class="KamishibaiSample.ListViewPage.Views.FruitsListPage"
+             Title="Fruits List">
+    <ContentPage.BindingContext>
+        <viewModels:FruitsListPageViewModel/>
+    </ContentPage.BindingContext>
+    <ContentPage.Behaviors>
+        <!-- Define navigation method and destination when NavigateDetailRequestCommand is executed -->
+        <mvvm:PushAsync x:TypeArguments="views:FruitDetailPage" Request="{Binding NavigateDetailRequestCommand}"/>
+    </ContentPage.Behaviors>
+
+    <ListView ItemsSource="{Binding Fruits}" BackgroundColor="LightGray">
+        <ListView.Behaviors>
+            <!-- When SelectedItem occurs, request Navigation with the selected fruit. -->
+            <behaviorsPack:SelectedItemBehavior Command="{Binding NavigateDetailRequestCommand}"/>
+        </ListView.Behaviors>
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <TextCell Text="{Binding Name}" TextColor="{Binding Color}"/>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+</ContentPage>

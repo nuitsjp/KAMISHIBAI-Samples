@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:KamishibaiSample.TabbedPage.ViewModels;assembly=KamishibaiSample"
+             xmlns:views="clr-namespace:KamishibaiSample.TabbedPage.Views;assembly=KamishibaiSample"
+             x:Class="KamishibaiSample.TabbedPage.Views.TabPage1"
+             Title="TabPage1">
+    <TabbedPage.BindingContext>
+        <viewModels:TabPage1ViewModel/>
+    </TabbedPage.BindingContext>
+    <ContentPage.Behaviors>
+        <views:AddTabbedChildPage x:TypeArguments="views:TabPageN" Request="{Binding RequestAddPageCommand}"/>
+    </ContentPage.Behaviors>
+    <ContentPage.Content>
+        <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+            <Label Text="TabPage1" />
+            <Button Text="Add Page" Command="{Binding RequestAddPageCommand}"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

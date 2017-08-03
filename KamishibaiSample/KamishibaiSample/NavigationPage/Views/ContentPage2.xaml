@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:KamishibaiSample.NavigationPage.ViewModels;assembly=KamishibaiSample"
+             xmlns:mvvm="clr-namespace:Nuits.Xamarin.Forms.Kamishibai.Mvvm;assembly=Nuits.Xamarin.Forms.Kamishibai"
+             xmlns:views="clr-namespace:KamishibaiSample.NavigationPage.Views;assembly=KamishibaiSample"
+             x:Class="KamishibaiSample.NavigationPage.Views.ContentPage2"
+             Title="ContentPage2">
+    <ContentPage.BindingContext>
+        <viewModels:ContentPage2ViewModel/>
+    </ContentPage.BindingContext>
+    <ContentPage.Behaviors>
+        <mvvm:PushAsync x:TypeArguments="views:ContentPage3" Request="{Binding RequestPage3}"/>
+        <mvvm:InsertPageBefore x:TypeArguments="views:ContentPage15, views:ContentPage2" Request="{Binding RequestInsert}"/>
+    </ContentPage.Behaviors>
+    <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+        <Label Text="{Binding DateTime}" />
+        <Button Text="Navigate Page3" Command="{Binding RequestPage3}"/>
+        <Button Text="Insert Page1.5" Command="{Binding RequestInsert}" CommandParameter="Hello, Insert"/>
+    </StackLayout>
+</ContentPage>
