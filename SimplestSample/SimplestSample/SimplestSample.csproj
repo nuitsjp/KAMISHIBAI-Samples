@@ -58,7 +58,7 @@
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Nuits.Xamarin.Forms.Kamishibai, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Nuits.Xamarin.Forms.Kamishibai.1.0.0-CI00002\lib\netstandard1.0\Nuits.Xamarin.Forms.Kamishibai.dll</HintPath>
+      <HintPath>..\..\packages\Nuits.Xamarin.Forms.Kamishibai.1.0.0-CI00007\lib\netstandard1.0\Nuits.Xamarin.Forms.Kamishibai.dll</HintPath>
     </Reference>
     <Reference Include="Xamarin.Forms.Core, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Xamarin.Forms.2.3.4.247\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+Xamarin.iOS10+xamarinmac20\Xamarin.Forms.Core.dll</HintPath>
@@ -71,7 +71,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
+    <None Include="packages.config">
+      <SubType>Designer</SubType>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Views\FirstPage.xaml">

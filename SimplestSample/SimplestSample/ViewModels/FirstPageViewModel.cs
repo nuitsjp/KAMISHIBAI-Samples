@@ -1,4 +1,5 @@
-﻿using System.Windows.Input;
+﻿using System;
+using System.Windows.Input;
 using Nuits.Xamarin.Forms.Kamishibai;
 using Nuits.Xamarin.Forms.Kamishibai.Mvvm;
 using Xamarin.Forms;
@@ -15,9 +16,17 @@ namespace SimplestSample.ViewModels
             set => SetProperty(ref _message, value);
         }
         
-        public NavigationRequest RequestSecondPage { get; } = new NavigationRequest();
+        private DateTime _selectedDate = DateTime.Today;
+
+        public DateTime SelectedDate
+        {
+            get => _selectedDate;
+            set => SetProperty(ref _selectedDate, value);
+        }
         
-        public ICommand NavigateCommand => new Command(() => RequestSecondPage.RaiseAsync());
+        public INavigationRequest<DateTime> RequestSecondPage { get; } = new NavigationRequest<DateTime>();
+        
+        public ICommand NavigateCommand => new Command(() => RequestSecondPage.RaiseAsync(SelectedDate));
 
         public void OnInitialize(string parameter)
         {

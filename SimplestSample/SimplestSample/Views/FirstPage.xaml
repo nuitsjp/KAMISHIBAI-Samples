@@ -10,10 +10,12 @@
         <viewModels:FirstPageViewModel/>
     </ContentPage.BindingContext>
     <ContentPage.Behaviors>
-        <mvvm:PushAsync x:TypeArguments="views:SecondPage" Request="{Binding RequestSecondPage}"/>
+        <mvvm:PushAsync Request="{Binding RequestSecondPage}"
+                        x:TypeArguments="views:SecondPage"/>
     </ContentPage.Behaviors>
     <StackLayout HorizontalOptions="Fill" VerticalOptions="Center" Margin="10">
         <Label Text="{Binding Message}" HorizontalOptions="Center"/>
+        <DatePicker Date="{Binding SelectedDate}"/>
         <Button Text="Navigate to Second" Command="{Binding NavigateCommand}"/>
     </StackLayout>
 </ContentPage>
