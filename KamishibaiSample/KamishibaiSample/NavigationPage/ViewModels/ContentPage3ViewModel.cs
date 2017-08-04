@@ -1,7 +1,7 @@
 ﻿using System.Diagnostics;
 using System.Runtime.CompilerServices;
-using Nuits.Xamarin.Forms.Kamishibai;
-using Nuits.Xamarin.Forms.Kamishibai.Mvvm;
+using Kamishibai.Xamarin.Forms;
+using Kamishibai.Xamarin.Forms.Mvvm;
 
 namespace KamishibaiSample.NavigationPage.ViewModels
 {
@@ -10,9 +10,9 @@ namespace KamishibaiSample.NavigationPage.ViewModels
         public NavigationRequestCommand RequestPopToRoot { get; } = new NavigationRequestCommand();
         public NavigationRequestCommand RequestRemoveContentPage1 { get; } = new NavigationRequestCommand();
         public NavigationRequestCommand RequestRemoveThis { get; } = new NavigationRequestCommand();
-        public void OnInitialize(object parameter)
+        public void OnInitialize()
         {
-            WriteLog(parameter);
+            WriteLog();
         }
 
         public void OnLoaded()

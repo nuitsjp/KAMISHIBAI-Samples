@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                  x:Class="SpecialMasterDetailPage.Views.MainPage"
+                  xmlns:pages="clr-namespace:SpecialMasterDetailPage.Views">
+    <MasterDetailPage.Master>
+        <pages:MenuPage/>
+    </MasterDetailPage.Master>
+    <MasterDetailPage.Detail>
+        <NavigationPage x:Name="Outer">
+            <x:Arguments>
+                <NavigationPage x:Name="Inner" Title="{Binding Source={x:Reference Inner}, Path=CurrentPage.Title}">
+                    <x:Arguments>
+                        <pages:HomePage/>
+                    </x:Arguments>
+                </NavigationPage>
+            </x:Arguments>
+        </NavigationPage>
+    </MasterDetailPage.Detail>
+</MasterDetailPage>

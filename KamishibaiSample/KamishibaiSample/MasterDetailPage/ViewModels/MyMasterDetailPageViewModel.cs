@@ -1,7 +1,7 @@
 ﻿using System.Diagnostics;
 using System.Runtime.CompilerServices;
-using Nuits.Xamarin.Forms.Kamishibai;
-using Nuits.Xamarin.Forms.Kamishibai.Mvvm;
+using Kamishibai.Xamarin.Forms;
+using Kamishibai.Xamarin.Forms.Mvvm;
 
 namespace KamishibaiSample.MasterDetailPage.ViewModels
 {
@@ -9,9 +9,9 @@ namespace KamishibaiSample.MasterDetailPage.ViewModels
     {
         public NavigationRequestCommand PushToDetailRequestCommand { get; } = new NavigationRequestCommand();
         public NavigationRequestCommand SetDetailRequestCommand { get; } = new NavigationRequestCommand();
-        public void OnInitialize(object parameter)
+        public void OnInitialize()
         {
-            WriteLog(parameter);
+            WriteLog();
         }
 
         public void OnLoaded()

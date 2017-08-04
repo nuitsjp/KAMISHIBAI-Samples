@@ -2,7 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:viewModels="clr-namespace:SimplestSample.ViewModels;assembly=SimplestSample"
-             xmlns:mvvm="clr-namespace:Nuits.Xamarin.Forms.Kamishibai.Mvvm;assembly=Nuits.Xamarin.Forms.Kamishibai"
+             xmlns:mvvm="clr-namespace:Kamishibai.Xamarin.Forms.Mvvm;assembly=Kamishibai.Xamarin.Forms"
              x:Class="SimplestSample.Views.SecondPage"
              Title="Second Page">
     <ContentPage.BindingContext>
@@ -12,6 +12,7 @@
         <mvvm:PopAsync Request="{Binding RequestPopAsync}"/>
     </ContentPage.Behaviors>
     <StackLayout HorizontalOptions="Fill" VerticalOptions="Center" Margin="10">
+        <Label Text="{Binding SelectedDate}"/>
         <Button Text="PopAsync" Command="{Binding RequestPopAsync}"/>
     </StackLayout>
 </ContentPage>

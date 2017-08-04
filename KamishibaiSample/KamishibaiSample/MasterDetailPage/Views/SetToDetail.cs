@@ -1,5 +1,5 @@
 ﻿using System.Threading.Tasks;
-using Nuits.Xamarin.Forms.Kamishibai;
+using Kamishibai.Xamarin.Forms;
 using Xamarin.Forms;
 
 namespace KamishibaiSample.MasterDetailPage.Views

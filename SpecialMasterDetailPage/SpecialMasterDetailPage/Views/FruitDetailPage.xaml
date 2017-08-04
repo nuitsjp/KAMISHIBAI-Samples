@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:SpecialMasterDetailPage.ViewModels;assembly=SpecialMasterDetailPage"
+             x:Class="SpecialMasterDetailPage.Views.FruitDetailPage"
+             Title="Fruit Detail">
+    <ContentPage.BindingContext>
+        <viewModels:FruitDetailPageViewModel/>
+    </ContentPage.BindingContext>
+    <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
+        <BoxView HeightRequest="10" WidthRequest="10" Color="{Binding Fruit.Color}"/>
+        <Label Text="{Binding Fruit.Name}"/>
+    </StackLayout>
+</ContentPage>

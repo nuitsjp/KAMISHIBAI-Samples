@@ -2,12 +2,12 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:KamishibaiSample;assembly=KamishibaiSample"
-             xmlns:mvvm="clr-namespace:Nuits.Xamarin.Forms.Kamishibai.Mvvm;assembly=Nuits.Xamarin.Forms.Kamishibai"
              xmlns:navigationPage="clr-namespace:KamishibaiSample.NavigationPage.Views;assembly=KamishibaiSample"
              xmlns:masterDetailPage="clr-namespace:KamishibaiSample.MasterDetailPage.Views;assembly=KamishibaiSample"
              xmlns:tabbedPage="clr-namespace:KamishibaiSample.TabbedPage.Views;assembly=KamishibaiSample"
              xmlns:carouselPage="clr-namespace:KamishibaiSample.CarouselPage.Views;assembly=KamishibaiSample"
              xmlns:listViewPage="clr-namespace:KamishibaiSample.ListViewPage.Views;assembly=KamishibaiSample"
+             xmlns:mvvm="clr-namespace:Kamishibai.Xamarin.Forms.Mvvm;assembly=Kamishibai.Xamarin.Forms"
              x:Class="KamishibaiSample.MainPage">
     <ContentPage.BindingContext>
         <local:MainPageViewModel/>

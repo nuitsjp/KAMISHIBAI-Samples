@@ -1,11 +1,11 @@
 ﻿using System;
 using System.ComponentModel;
-using Nuits.Xamarin.Forms.Kamishibai;
-using Nuits.Xamarin.Forms.Kamishibai.Mvvm;
+using Kamishibai.Xamarin.Forms;
+using Kamishibai.Xamarin.Forms.Mvvm;
 
 namespace SimplestSample.ViewModels
 {
-    public class SecondPageViewModel : ViewModelBase, IPageInilializeAware<DateTime>, INotifyPropertyChanged
+    public class SecondPageViewModel : ViewModelBase, IPageInitializeAware<DateTime>, INotifyPropertyChanged
     {
         private DateTime _selectedDate;
 

@@ -1,16 +1,16 @@
 ﻿using System.Diagnostics;
 using System.Runtime.CompilerServices;
-using Nuits.Xamarin.Forms.Kamishibai;
-using Nuits.Xamarin.Forms.Kamishibai.Mvvm;
+using Kamishibai.Xamarin.Forms;
+using Kamishibai.Xamarin.Forms.Mvvm;
 
 namespace KamishibaiSample.TabbedPage.ViewModels
 {
     public class TabPage1ViewModel : ViewModelBase, IPageLifecycleAware
     {
         public NavigationRequestCommand RequestAddPageCommand { get; } = new NavigationRequestCommand();
-        public void OnInitialize(object parameter)
+        public void OnInitialize()
         {
-            WriteLog(parameter);
+            WriteLog();
         }
 
         public void OnLoaded()

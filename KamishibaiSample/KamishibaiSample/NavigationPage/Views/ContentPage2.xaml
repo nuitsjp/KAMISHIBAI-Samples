@@ -2,8 +2,8 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:viewModels="clr-namespace:KamishibaiSample.NavigationPage.ViewModels;assembly=KamishibaiSample"
-             xmlns:mvvm="clr-namespace:Nuits.Xamarin.Forms.Kamishibai.Mvvm;assembly=Nuits.Xamarin.Forms.Kamishibai"
              xmlns:views="clr-namespace:KamishibaiSample.NavigationPage.Views;assembly=KamishibaiSample"
+             xmlns:mvvm="clr-namespace:Kamishibai.Xamarin.Forms.Mvvm;assembly=Kamishibai.Xamarin.Forms"
              x:Class="KamishibaiSample.NavigationPage.Views.ContentPage2"
              Title="ContentPage2">
     <ContentPage.BindingContext>

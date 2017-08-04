@@ -1,8 +1,8 @@
-﻿using Nuits.Xamarin.Forms.Kamishibai;
+﻿using Kamishibai.Xamarin.Forms;
 
 namespace KamishibaiSample.ListViewPage.ViewModels
 {
-    public class FruitDetailPageViewModel : ViewModelBase, IPageInilializeAware<Fruit>
+    public class FruitDetailPageViewModel : ViewModelBase, IPageInitializeAware<Fruit>
     {
         /// <summary>
         /// Selected Fruit.

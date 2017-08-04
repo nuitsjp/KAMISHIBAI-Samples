@@ -145,8 +145,8 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="Nuits.Xamarin.Forms.Kamishibai, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Nuits.Xamarin.Forms.Kamishibai.1.0.0-CI00007\lib\netstandard1.0\Nuits.Xamarin.Forms.Kamishibai.dll</HintPath>
+    <Reference Include="Kamishibai.Xamarin.Forms, Version=0.4.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Kamishibai.Xamarin.Forms.0.4.0-pre1\lib\netstandard1.0\Kamishibai.Xamarin.Forms.dll</HintPath>
     </Reference>
     <Reference Include="Xamarin.Forms.BehaviorsPack, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Xamarin.Forms.BehaviorsPack.1.2.0\lib\netstandard1.0\Xamarin.Forms.BehaviorsPack.dll</HintPath>

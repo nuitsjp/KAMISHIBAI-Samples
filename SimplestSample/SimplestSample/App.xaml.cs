@@ -1,4 +1,4 @@
-﻿using Nuits.Xamarin.Forms.Kamishibai;
+﻿using Kamishibai.Xamarin.Forms;
 using SimplestSample.Views;
 using Xamarin.Forms;
 
@@ -10,6 +10,7 @@ namespace SimplestSample
         {
             InitializeComponent();
 
+            ApplicationService.Initialize(this);
             ApplicationService.SetMainPage(
                 new NavigationPage(new FirstPage()), "Hello, KAMISHIBAI!");
         }

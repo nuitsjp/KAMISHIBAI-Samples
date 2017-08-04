@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:SpecialMasterDetailPage.ViewModels;assembly=SpecialMasterDetailPage"
+             xmlns:behaviorsPack="clr-namespace:Xamarin.Forms.BehaviorsPack;assembly=Xamarin.Forms.BehaviorsPack"
+             xmlns:navigation="clr-namespace:SpecialMasterDetailPage.Views.Navigation;assembly=SpecialMasterDetailPage"
+             xmlns:views="clr-namespace:SpecialMasterDetailPage.Views;assembly=SpecialMasterDetailPage"
+             x:Class="SpecialMasterDetailPage.Views.MenuPage"
+             Title="Master">
+    <ContentPage.BindingContext>
+        <viewModels:MenuPageViewModel/>
+    </ContentPage.BindingContext>
+    <ContentPage.Behaviors>
+        <navigation:PushInnerAsync Request="{Binding ReqeuestHome}" x:TypeArguments="views:HomePage"/>
+        <navigation:PushInnerAsync Request="{Binding ReqeuestFruitsList}" x:TypeArguments="views:FruitsListPage"/>
+        <navigation:PushInnerAsync Request="{Binding ReqeuestAbout}" x:TypeArguments="views:AboutPage"/>
+    </ContentPage.Behaviors>
+    <Grid Padding="0, 100, 0, 0" BackgroundColor="#03A9F4">
+        <ListView ItemsSource="{Binding MenuItems}" BackgroundColor="White">
+            <ListView.Behaviors>
+                <behaviorsPack:SelectedItemBehavior Command="{Binding SelectedMenuItemCommand}"/>
+            </ListView.Behaviors>
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding Title}"/>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </Grid>
+</ContentPage>

@@ -1,14 +1,14 @@
 ﻿using System.Diagnostics;
 using System.Runtime.CompilerServices;
-using Nuits.Xamarin.Forms.Kamishibai;
+using Kamishibai.Xamarin.Forms;
 
 namespace KamishibaiSample.TabbedPage.ViewModels
 {
     public class TabPage2ViewModel : ViewModelBase, IPageLifecycleAware
     {
-        public void OnInitialize(object parameter)
+        public void OnInitialize()
         {
-            WriteLog(parameter);
+            WriteLog();
         }
 
         public void OnLoaded()

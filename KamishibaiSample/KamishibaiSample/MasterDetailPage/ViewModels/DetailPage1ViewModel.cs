@@ -1,6 +1,6 @@
 ﻿using System.Diagnostics;
 using System.Runtime.CompilerServices;
-using Nuits.Xamarin.Forms.Kamishibai;
+using Kamishibai.Xamarin.Forms;
 
 namespace KamishibaiSample.MasterDetailPage.ViewModels
 {
@@ -8,9 +8,9 @@ namespace KamishibaiSample.MasterDetailPage.ViewModels
     {
         private static int _count = 1;
         public string Message => $"Create count:{_count}";
-        public void OnInitialize(object parameter)
+        public void OnInitialize()
         {
-            WriteLog(parameter);
+            WriteLog();
             _count++;
         }
 

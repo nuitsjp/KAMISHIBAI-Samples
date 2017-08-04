@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Threading.Tasks;
-using Nuits.Xamarin.Forms.Kamishibai;
-using Nuits.Xamarin.Forms.Kamishibai.Mvvm;
+using Kamishibai.Xamarin.Forms;
+using Kamishibai.Xamarin.Forms.Mvvm;
 using Xamarin.Forms;
 
 namespace KamishibaiSample.MasterDetailPage.Views

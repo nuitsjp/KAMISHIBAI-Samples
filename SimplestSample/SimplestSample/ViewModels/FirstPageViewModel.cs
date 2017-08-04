@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Windows.Input;
-using Nuits.Xamarin.Forms.Kamishibai;
-using Nuits.Xamarin.Forms.Kamishibai.Mvvm;
+using Kamishibai.Xamarin.Forms;
+using Kamishibai.Xamarin.Forms.Mvvm;
 using Xamarin.Forms;
 
 namespace SimplestSample.ViewModels
 {
-    public class FirstPageViewModel : ViewModelBase, IPageInilializeAware<string>
+    public class FirstPageViewModel : ViewModelBase, IPageInitializeAware<string>
     {
         private string _message;
 

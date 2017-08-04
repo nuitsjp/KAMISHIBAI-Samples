@@ -1,5 +1,5 @@
 ﻿using System.Collections.Generic;
-using Nuits.Xamarin.Forms.Kamishibai.Mvvm;
+using Kamishibai.Xamarin.Forms.Mvvm;
 using Xamarin.Forms;
 
 namespace KamishibaiSample.ListViewPage.ViewModels

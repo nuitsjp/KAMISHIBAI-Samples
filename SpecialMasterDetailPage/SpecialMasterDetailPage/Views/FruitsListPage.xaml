@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:behaviorsPack="clr-namespace:Xamarin.Forms.BehaviorsPack;assembly=Xamarin.Forms.BehaviorsPack"
+             xmlns:viewModels1="clr-namespace:SpecialMasterDetailPage.ViewModels;assembly=SpecialMasterDetailPage"
+             xmlns:views="clr-namespace:SpecialMasterDetailPage.Views;assembly=SpecialMasterDetailPage"
+             xmlns:navigation="clr-namespace:SpecialMasterDetailPage.Views.Navigation;assembly=SpecialMasterDetailPage"
+             x:Class="SpecialMasterDetailPage.Views.FruitsListPage"
+             Title="Fruits List">
+    <ContentPage.BindingContext>
+        <viewModels1:FruitsListPageViewModel/>
+    </ContentPage.BindingContext>
+    <ContentPage.Behaviors>
+        <!-- Define navigation method and destination when NavigateDetailRequestCommand is executed -->
+        <navigation:PushOuterAsync x:TypeArguments="views:FruitDetailPage" Request="{Binding NavigateDetailRequestCommand}"/>
+    </ContentPage.Behaviors>
+
+    <ListView ItemsSource="{Binding Fruits}">
+        <ListView.Behaviors>
+            <!-- When SelectedItem occurs, request Navigation with the selected fruit. -->
+            <behaviorsPack:SelectedItemBehavior Command="{Binding NavigateDetailRequestCommand}"/>
+        </ListView.Behaviors>
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <TextCell Text="{Binding Name}" TextColor="{Binding Color}"/>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+</ContentPage>
