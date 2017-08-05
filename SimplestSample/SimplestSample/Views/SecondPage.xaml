@@ -9,7 +9,7 @@
         <viewModels:SecondPageViewModel/>
     </ContentPage.BindingContext>
     <ContentPage.Behaviors>
-        <mvvm:PopAsync Request="{Binding RequestPopAsync}"/>
+        <mvvm:PopModalAsync Request="{Binding RequestPopAsync}"/>
     </ContentPage.Behaviors>
     <StackLayout HorizontalOptions="Center" VerticalOptions="Center" Margin="10">
         <Label Text="{Binding SelectedDate, StringFormat='{0:yyyy/MM/dd}'}"/>

@@ -10,8 +10,8 @@
         <viewModels:FirstPageViewModel/>
     </ContentPage.BindingContext>
     <ContentPage.Behaviors>
-        <mvvm:PushAsync Request="{Binding RequestSecondPage}"
-                        x:TypeArguments="views:SecondPage"/>
+        <mvvm:PushModalAsync Request="{Binding RequestSecondPage}"
+                             x:TypeArguments="views:SecondPage"/>
     </ContentPage.Behaviors>
     <StackLayout HorizontalOptions="Center" VerticalOptions="Center" Margin="10">
         <Label Text="{Binding Message}" HorizontalOptions="Center"/>

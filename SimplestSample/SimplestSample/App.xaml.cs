@@ -11,8 +11,7 @@ namespace SimplestSample
             InitializeComponent();
 
             ApplicationService.Initialize(this);
-            ApplicationService.SetMainPage(
-                new NavigationPage(new FirstPage()), "Hello, KAMISHIBAI!");
+            ApplicationService.SetMainPage(new FirstPage(), "Hello, KAMISHIBAI!");
         }
 
         protected override void OnStart()
