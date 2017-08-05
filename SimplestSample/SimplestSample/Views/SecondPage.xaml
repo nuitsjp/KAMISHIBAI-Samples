@@ -11,8 +11,8 @@
     <ContentPage.Behaviors>
         <mvvm:PopAsync Request="{Binding RequestPopAsync}"/>
     </ContentPage.Behaviors>
-    <StackLayout HorizontalOptions="Fill" VerticalOptions="Center" Margin="10">
-        <Label Text="{Binding SelectedDate}"/>
+    <StackLayout HorizontalOptions="Center" VerticalOptions="Center" Margin="10">
+        <Label Text="{Binding SelectedDate, StringFormat='{0:yyyy/MM/dd}'}"/>
         <Button Text="PopAsync" Command="{Binding RequestPopAsync}"/>
     </StackLayout>
 </ContentPage>

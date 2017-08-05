@@ -53,9 +53,6 @@
     </Reference>
     <Reference Include="Mono.Android" />
     <Reference Include="mscorlib" />
-    <Reference Include="Nuits.Xamarin.Forms.Kamishibai, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Nuits.Xamarin.Forms.Kamishibai.1.0.0-CI00002\lib\netstandard1.0\Nuits.Xamarin.Forms.Kamishibai.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.IO.Compression" />
