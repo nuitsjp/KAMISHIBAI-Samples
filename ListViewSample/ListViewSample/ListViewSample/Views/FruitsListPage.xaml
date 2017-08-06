@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewModels="clr-namespace:ListViewSample.ViewModels;assembly=ListViewSample"
+             xmlns:mvvm="clr-namespace:Kamishibai.Xamarin.Forms.Mvvm;assembly=Kamishibai.Xamarin.Forms"
+             xmlns:views="clr-namespace:ListViewSample.Views;assembly=ListViewSample"
+             x:Class="ListViewSample.Views.FruitsListPage"
+             Title="Fruits List">
+    <ContentPage.BindingContext>
+        <viewModels:FruitsListPageViewModel/>
+    </ContentPage.BindingContext>
+    <ContentPage.Behaviors>
+        <mvvm:PushAsync Request="{Binding RequestDetail}" x:TypeArguments="views:FruitDetailPage" />
+    </ContentPage.Behaviors>
+    <ListView ItemsSource="{Binding Fruits}" SelectedItem="{Binding SelectedFruit, Mode=TwoWay}">
+        <ListView.ItemTemplate>
+            <DataTemplate>
+                <TextCell Text="{Binding Name}" TextColor="{Binding Color}"/>
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+</ContentPage>
