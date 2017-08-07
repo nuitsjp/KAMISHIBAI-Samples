@@ -48,9 +48,6 @@
     <Compile Include="Views\AboutPage.xaml.cs">
       <DependentUpon>AboutPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\DetailContentPage.xaml.cs">
-      <DependentUpon>DetailContentPage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Views\FruitDetailPage.xaml.cs">
       <DependentUpon>FruitDetailPage.xaml</DependentUpon>
     </Compile>
@@ -76,8 +73,8 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="Kamishibai.Xamarin.Forms, Version=0.4.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Kamishibai.Xamarin.Forms.0.4.0-pre1\lib\netstandard1.0\Kamishibai.Xamarin.Forms.dll</HintPath>
+    <Reference Include="Kamishibai.Xamarin.Forms, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Kamishibai.Xamarin.Forms.1.0.0\lib\netstandard1.0\Kamishibai.Xamarin.Forms.dll</HintPath>
     </Reference>
     <Reference Include="Xamarin.Forms.BehaviorsPack, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Xamarin.Forms.BehaviorsPack.1.2.0\lib\netstandard1.0\Xamarin.Forms.BehaviorsPack.dll</HintPath>
@@ -103,12 +100,6 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Views\MenuPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Views\DetailContentPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

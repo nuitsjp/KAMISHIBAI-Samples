@@ -17,14 +17,12 @@
         <mvvm:PushModalAsync x:TypeArguments="masterDetailPage:MyMasterDetailPage" Request="{Binding RequestMasterDetailPageCommand}"/>
         <mvvm:PushModalAsync x:TypeArguments="tabbedPage:MyTabbedPage" Request="{Binding RequestTabbedPageCommand}"/>
         <mvvm:PushModalAsync x:TypeArguments="carouselPage:MyCarouselPage" Request="{Binding RequestCarouselPageCommand}"/>
-        <mvvm:PushModalAsync x:TypeArguments="listViewPage:FruitsListPage" Request="{Binding RequestListViewPageCommand}" WithNavigationPage="True"/>
     </ContentPage.Behaviors>
     <StackLayout HorizontalOptions="Fill" VerticalOptions="Center" Margin="10">
         <Button Text="NavigationPage" Command="{Binding RequestNavigationPageCommand}" CommandParameter="Hello, Kamishibai"/>
         <Button Text="MasterDetailPage" Command="{Binding RequestMasterDetailPageCommand}"/>
         <Button Text="TabbedPage" Command="{Binding RequestTabbedPageCommand}"/>
         <Button Text="CarouselPage" Command="{Binding RequestCarouselPageCommand}"/>
-        <Button Text="ListViewPage" Command="{Binding RequestListViewPageCommand}"/>
     </StackLayout>
 
 </ContentPage>

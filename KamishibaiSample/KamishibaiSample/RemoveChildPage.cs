@@ -5,7 +5,7 @@ using Xamarin.Forms;
 
 namespace KamishibaiSample
 {
-    public abstract class RemoveChildPage<T> : NavigationBehavior<T> where T : Page
+    public abstract class RemoveChildPage<T> : NavigationBehavior<T> where T : Page, new ()
     {
         public override Task Navigate<TParam>(TParam parameter = default(TParam))
         {
