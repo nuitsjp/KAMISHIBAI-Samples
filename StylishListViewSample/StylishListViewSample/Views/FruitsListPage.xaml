@@ -5,17 +5,35 @@
              xmlns:viewModels="clr-namespace:StylishListViewSample.ViewModels;assembly=StylishListViewSample"
              xmlns:views="clr-namespace:StylishListViewSample.Views;assembly=StylishListViewSample"
              xmlns:behaviorsPack="clr-namespace:Xamarin.Forms.BehaviorsPack;assembly=Xamarin.Forms.BehaviorsPack"
+             xmlns:models="clr-namespace:StylishListViewSample.Models;assembly=StylishListViewSample"
              x:Class="StylishListViewSample.Views.FruitsListPage"
              Title="Fruits List">
 	<ContentPage.BindingContext>
 		<viewModels:FruitsListPageViewModel/>
 	</ContentPage.BindingContext>
 	<ContentPage.Behaviors>
-		<mvvm:PushAsync Request="{Binding RequestDetail}" x:TypeArguments="views:FruitDetailPage" />
+	    <mvvm:PushAsync Request="{Binding RequestDetail}" x:TypeArguments="views:FruitDetailPage" />
+        <!--
+        When navigation directly with View.
+	    <mvvm:PushAsync x:TypeArguments="views:FruitDetailPage">
+	        <mvvm:PushAsync.Request>
+	            <mvvm:NavigationRequestCommand x:TypeArguments="x:Int32" x:Name="NavigationRequestCommand"/>
+	        </mvvm:PushAsync.Request>
+	    </mvvm:PushAsync>
+        -->
 	</ContentPage.Behaviors>
 	<ListView ItemsSource="{Binding Fruits}">
 		<ListView.Behaviors>
-			<behaviorsPack:SelectedItemBehavior Command="{Binding RequestDetail}"/>
+            <!-- When passing a Fruit's id. -->
+		    <behaviorsPack:SelectedItemBehavior Command="{Binding RequestDetail}" PropertyPath="Id"/>
+            <!--
+            When passing a Fruit object directly.
+            <behaviorsPack:SelectedItemBehavior Command="{Binding RequestDetail}"/>
+            -->
+            <!--
+            When navigation directly with View.
+            <behaviorsPack:SelectedItemBehavior Command="{Binding Source={x:Reference NavigationRequestCommand}}"  PropertyPath="Id"/>
+            -->
 		</ListView.Behaviors>
 		<ListView.ItemTemplate>
 			<DataTemplate>
