@@ -61,15 +61,6 @@
     <Compile Include="CarouselPage\Views\MyCarouselPage.xaml.cs">
       <DependentUpon>MyCarouselPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ListViewPage\ViewModels\Fruit.cs" />
-    <Compile Include="ListViewPage\ViewModels\FruitDetailPageViewModel.cs" />
-    <Compile Include="ListViewPage\ViewModels\FruitsListPageViewModel.cs" />
-    <Compile Include="ListViewPage\Views\FruitDetailPage.xaml.cs">
-      <DependentUpon>FruitDetailPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="ListViewPage\Views\FruitsListPage.xaml.cs">
-      <DependentUpon>FruitsListPage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="MasterDetailPage\ViewModels\DetailPage2ViewModel.cs" />
     <Compile Include="MasterDetailPage\ViewModels\DetailPage1ViewModel.cs" />
     <Compile Include="MasterDetailPage\ViewModels\MyMasterDetailPageViewModel.cs" />
@@ -145,8 +136,8 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="Kamishibai.Xamarin.Forms, Version=0.4.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\..\packages\Kamishibai.Xamarin.Forms.0.4.0-pre1\lib\netstandard1.0\Kamishibai.Xamarin.Forms.dll</HintPath>
+    <Reference Include="Kamishibai.Xamarin.Forms, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Kamishibai.Xamarin.Forms.1.0.0\lib\netstandard1.0\Kamishibai.Xamarin.Forms.dll</HintPath>
     </Reference>
     <Reference Include="Xamarin.Forms.BehaviorsPack, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\..\packages\Xamarin.Forms.BehaviorsPack.1.2.0\lib\netstandard1.0\Xamarin.Forms.BehaviorsPack.dll</HintPath>
@@ -268,18 +259,6 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="NavigationPage\Views\ContentPage15.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="ListViewPage\Views\FruitsListPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-      <SubType>Designer</SubType>
-    </EmbeddedResource>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="ListViewPage\Views\FruitDetailPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
       <SubType>Designer</SubType>
     </EmbeddedResource>

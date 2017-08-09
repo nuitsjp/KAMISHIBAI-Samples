@@ -13,7 +13,6 @@ namespace KamishibaiSample
 
         public NavigationRequestCommand RequestTabbedPageCommand { get; } = new NavigationRequestCommand();
         public NavigationRequestCommand RequestCarouselPageCommand { get; } = new NavigationRequestCommand();
-        public NavigationRequestCommand RequestListViewPageCommand { get; } = new NavigationRequestCommand();
 
         public void OnInitialize()
         {
